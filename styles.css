@@ -1,0 +1,683 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#close-btn {
+    display: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 50px;
+    /* Ensure the body takes up full height */
+}
+
+.site-name {
+    color: #FEF9F2;
+    /* Set text color to the specified color */
+    font-style: italic;
+    /* Make the BossStore text italic */
+    font-size: 22px;
+    /* Increase size of site name */
+    margin-left: 10px;
+    /* Add margin to push it to the right */
+    cursor: pointer;
+    /* Make web name clickable */
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 1vi;
+    /* Make the bicycle icon slightly bigger */
+    cursor: pointer;
+    /* Make bicycle icon clickable */
+}
+
+.inside-hamburg {
+    width: 37.5%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mf {
+    padding: 0;
+    margin: auto;
+}
+
+.topbar {
+    border: 0.1px solid #FFE3E3;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #789DBC;
+    /* Blue color */
+    padding: 0px 20px;
+    margin-right: 2vi;
+    flex-shrink: 0;
+    /* Prevents topbar from shrinking */
+}
+
+.topbar .section {
+    color: #FEF9F2;
+    /* Set text color to the specified color */
+}
+
+/* Add pointer cursor to each section */
+.logo,
+.search,
+.goods-type,
+.cart,
+.user {
+    cursor: pointer;
+    /* Make the entire section clickable */
+}
+
+.logo {
+    width: 22%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 22px;
+    /* Increase font size for logo */
+    font-weight: bold;
+    margin-left: 20px;
+    /* Add margin to push the logo section to the right */
+}
+
+.search {
+    width: 28%;
+    display: flex;
+    gap: 5px;
+}
+
+.search input {
+    flex: 1;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 35vi;
+}
+
+.search-icon {
+    color: rgb(102, 100, 100);
+    background-color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.goods-type,
+.cart,
+.user {
+    margin-top: 0.55vi;
+    width: 12.5%;
+    display: flex;
+    flex-direction: column;
+    /* Stack icon and description vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    padding: 0% 5vi;
+    /* Decrease text size */
+}
+
+.goods-type button,
+.cart button,
+.user button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    /* Decrease icon size */
+    color: #FEF9F2;
+    /* Set icon color to the specified color */
+    cursor: pointer;
+}
+
+/* Make the descriptions clickable */
+.goods-type .description,
+.cart .description,
+.user .description {
+    cursor: pointer;
+    /* Make descriptions below icons clickable */
+}
+
+.f {
+    position: relative;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: #C9E9D2;
+    /* Light green */
+    padding: 18px 0;
+    font-size: 14px;
+    color: #333;
+    width: 100%;
+    flex-shrink: 0;
+    /* Prevents footer from shrinking */
+}
+
+footer p {
+    margin-top: 0.5vi;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+#hamburg {
+    color: #FEF9F2;
+    /* border: 2px solid black; */
+    display: none;
+}
+
+/* .inline-hamburg {
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 90px;
+    width: 100%;
+} */
+
+.mf {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    /* Optional, for spacing */
+    align-items: center;
+    /* Ensures both elements are vertically centered */
+}
+
+.search {
+    flex-grow: 1;
+    /* Allows the search box to take up available space */
+    flex-shrink: 0;
+    /* Prevents the search box from shrinking */
+    flex-basis: 0;
+    /* Sets initial size of the search box */
+    max-width: 300px;
+    /* Optional: Set max-width to avoid stretching too much */
+    display: flex;
+    align-items: center;
+}
+
+
+#hamburg-wrap {
+    display: none;
+    /* Hide initially */
+}
+
+.mf {
+    margin-left: 13vi;
+}
+
+#hamburg-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    /* Add some space between the search and hamburger */
+    position: relative;
+    /* Ensure it's positioned properly within the topbar */
+}
+
+
+.swiper {
+    width: 48vi;
+    height: 28vi;
+}
+
+.slidebar {
+    margin-top: 4vi;
+}
+
+.swiper img {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.table-like {
+    margin-top: 3.2vi;
+    margin-bottom: 3.2vi;
+}
+
+div h4 {
+    margin-bottom: 0;
+    margin-left: 1vi;
+    font-weight: bold;
+    color: rgb(46, 43, 43);
+}
+
+.grid-item {
+    width: 200px;
+}
+
+.grid-item--width2 {
+    width: 400px;
+}
+
+.container {
+    margin-top: 2vi;
+    color: rgb(46, 43, 43);
+}
+
+hr {
+    margin-top: 0;
+}
+
+
+@media(max-width: 1024px) {
+    div.section.goods-type {
+        padding-left: 0;
+    }
+
+    .goods-type,
+    .cart,
+    .user {
+        margin-left: 0;
+        margin-right: 3vi;
+        padding: 0 2vi;
+    }
+}
+
+@media (max-width: 887px) {
+    div#hamburg-wrap {
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    .topbar .section.cart {
+        position: relative;
+        /* Make sure the cart icon is positioned relative to the parent */
+    }
+
+    /* Position the cart counter near the cart icon */
+    .cart-counter {
+        position: relative;
+        top: 5px;
+        left: 0;
+        right: -5px;
+        /* Adjust the position as needed */
+    }
+
+
+    div.section.goods-type {
+        padding-right: 0px;
+    }
+
+    #hamburg-wrap {
+        display: block;
+    }
+
+    .table-like p {
+        font-size: 1rem;
+        /* Slightly smaller font size for smaller screens */
+    }
+
+    #hamburg {
+        font-size: 40px;
+        display: inline-block;
+    }
+
+    /* 
+    .inside-hamburg {
+        width: 37.5%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+
+    .inside-hamburg {
+        display: none;
+    }
+
+    .mf {
+        margin-left: 20vi;
+        margin-right: 2vi;
+    }
+
+
+    div#hamburg-wrap {
+        padding-left: 2vi;
+    }
+
+    .inside-hamburg {
+        display: none;
+        flex-direction: column;
+        /* Stack items vertically */
+        position: fixed;
+        /* Make it fixed on the screen */
+        top: 50px;
+        /* Position it below the top bar */
+        left: 0;
+        width: 100%;
+        /* Full width */
+        background-color: #f1f1f1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        /* Ensure it's above the content */
+        padding: 10px;
+        margin-top: 10px;
+        /* Space below the top bar */
+    }
+
+    /* Ensure items inside the menu are stacked vertically */
+    .inside-hamburg .section {
+        margin-bottom: 15px;
+        /* Space between items */
+    }
+
+    /* Style the button and p to align them */
+    .inside-hamburg .section button {
+        font-size: 20px;
+        background: none;
+        border: none;
+        color: #333;
+        cursor: pointer;
+        display: block;
+        /* Ensures they take up full width */
+        width: 100%;
+    }
+
+    /* Styling the description p element */
+    .inside-hamburg .section p {
+        font-size: 16px;
+        color: #333;
+        text-align: center;
+    }
+
+    /* Show the dropdown menu when active */
+    .topbar .inside-hamburg.show {
+        display: flex;
+        /* Show when toggled */
+    }
+}
+
+
+
+/* Responsive design */
+@media (max-width: 425px) {
+
+
+    #close-btn {
+        display: inline-block;
+    }
+
+    .content {
+        margin: auto;
+    }
+
+    .search input {
+        flex: 1;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 90vi;
+    }
+
+    .mf {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+    }
+
+    .topbar {
+        padding: 0;
+    }
+
+    #hamburg {
+        font-size: 40px;
+        margin-bottom: 1.2vi;
+    }
+
+    /* .topbar i .fa-bars #hamburg  {
+        display: inline-block;
+        font-size: 6000px;
+    } */
+
+    .topbar {
+        flex-wrap: wrap;
+    }
+
+    .swiper {
+        width: 58vi;
+        height: 38vi;
+    }
+
+    body {
+        padding-top: 110px;
+    }
+
+    .search {
+        width: 10%;
+        display: flex;
+        gap: 5px;
+    }
+
+    .card {
+        width: 70vi;
+        margin: auto;
+    }
+
+    .section {
+        width: 100%;
+        justify-content: space-around;
+        margin: 5px 0;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .section.search {
+        margin-top: 0vi;
+    }
+
+    .section.logo {
+        margin-bottom: 0vi;
+    }
+
+    /* .search input {
+        width: 70%;
+    } */
+
+    .goods-type,
+    .cart,
+    .user {
+        width: 20%;
+    }
+
+    .mf {
+        flex-direction: row;
+        /* Align the search bar and hamburger on the same row */
+        justify-content: center;
+        /* Add space between the two elements */
+    }
+
+    .search {
+        flex-grow: 0;
+        /* Make search bar not take all the space */
+    }
+
+    #hamburg-wrap {
+        display: block;
+        /* Make the hamburger visible on small screens */
+    }
+
+    div.mf {
+        margin: auto;
+    }
+}
+
+
+
+
+@media (max-width: 375px) {
+
+    div.mf {
+        padding: auto;
+    }
+}
+
+@media (max-width: 320px) {
+    div#hamburg-wrap {
+        padding-left: 9vi;
+    }
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+    /* Smooth zoom-out effect */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Slightly zooms the card */
+    cursor: pointer;
+    /* Show a pointer cursor on hover */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Slightly zooms the card */
+    cursor: pointer;
+    /* Show a pointer cursor on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Adds a shadow effect */
+}
+
+/* Add this to your styles.css */
+
+/* Make the entire slidebar clickable */
+.swiper {
+    cursor: pointer;
+    /* Shows a pointer cursor over the entire swiper container */
+}
+
+/* Optionally, make each individual slide clickable as well */
+.swiper-slide {
+    cursor: pointer;
+    /* Shows a pointer cursor over each slide */
+}
+
+#hamburg {
+    cursor: pointer;
+    /* Add this to make both icons clickable */
+}
+
+/* Ensure uniform padding and spacing across sections */
+.table-like {
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Style for the section titles */
+.table-like h4 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Style for the paragraph with quotes */
+.table-like p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+    max-width: 800px;
+    /* Limit width to avoid long lines */
+    margin: 0 auto 20px auto;
+    /* Center align and add margin at the bottom */
+}
+
+/* Add HR style to separate sections */
+.table-like hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px auto;
+    width: 80%;
+    /* Make the horizontal line shorter */
+}
+
+/* Centering the cards in their columns */
+.container .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Ensures the card title and button are aligned */
+.card-body {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Make the "Buy Now" button look consistent across all cards */
+.card-body .btn {
+    margin-top: 15px;
+    width: 100%;
+}
+
+
+span p {
+    display: inline;
+}
+
+h4 {
+    cursor: pointer;
+}
+
+.cart-counter {
+    display: none;
+    /* Initially hidden */
+    position: absolute;
+    /* Positioning relative to the cart button */
+    top: 10px;
+    right: 17.4vi;
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    padding: 1px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    /* line-height: 25px; */
+}
