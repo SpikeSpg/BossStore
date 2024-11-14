@@ -544,6 +544,9 @@ hr {
 
 
 @media (max-width: 375px) {
+    div#hamburg-wrap {
+        padding-left: 12vi;
+    }
 
     div.mf {
         padding: auto;
