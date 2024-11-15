@@ -744,9 +744,13 @@ h4 {
         margin-bottom: 0vi;
     }
 
-    div.topbar i,
+    
     div.topbar h2 {
         font-size: 6.8vi;
+    }
+
+    div.topbar i {
+        font-size: 7.2vi;
     }
 
     div.topbar {
