@@ -290,20 +290,6 @@ hr {
     margin-top: 0;
 }
 
-@media(max-width: 1080px) {
-    div.section.goods-type {
-        padding-left: 0;
-    }
-
-    .goods-type,
-    .cart,
-    .user {
-        margin-left: 0;
-        margin-right: 3vi;
-        padding: 0 2vi;
-    }
-}
-
 
 @media(max-width: 1024px) {
     div.section.goods-type {
@@ -553,7 +539,7 @@ hr {
         margin: auto;
     }
 
-    
+
     div#hamburg-wrap {
         padding-left: 4vi;
     }
@@ -699,4 +685,269 @@ h4 {
     height: 25px;
     text-align: center;
     /* line-height: 25px; */
+}
+
+@media (max-width: 1080px) and (max-height: 2400px) {
+    .row.row-cols-1 .col {
+        flex: 0 0 100%;
+        /* Make each column take 100% width */
+        max-width: 80%;
+        /* Prevent columns from shrinking */
+
+        flex-shrink: 0;
+    }
+
+    .goods-text {
+        margin: 10vi 0;
+    }
+
+    .table-like p {
+        font-size: 5vi;
+    }
+
+    .table-like h4 {
+        font-size: 7vi;
+    }
+
+    .swiper {
+        width: 62vi;
+        height: 40vi;
+    }
+
+    .topbar {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .topbar .section.cart {
+        position: relative;
+        /* Make sure the cart icon is positioned relative to the parent */
+    }
+
+
+    /* Show the dropdown menu when active */
+    .topbar .inside-hamburg.show {
+        display: flex;
+        /* Show when toggled */
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .section.search {
+        margin-top: 0vi;
+    }
+
+    .section.logo {
+        margin-bottom: 0vi;
+    }
+
+    div.topbar i,
+    div.topbar h2 {
+        font-size: 6.8vi;
+    }
+
+    div.topbar {
+        padding-top: 1vi;
+        justify-content: center;
+    }
+
+    #hamburg-wrap {
+        display: block;
+    }
+
+    #hamburg {
+        font-size: 40px;
+        display: inline-block;
+    }
+
+    .inside-hamburg {
+        display: none;
+    }
+
+    div#hamburg-wrap {
+        padding-left: 2vi;
+    }
+
+    .inside-hamburg {
+        display: none;
+        flex-direction: column;
+        /* Stack items vertically */
+        position: fixed;
+        /* Make it fixed on the screen */
+        top: 50px;
+        /* Position it below the top bar */
+        left: 0;
+        width: 100%;
+        /* Full width */
+        background-color: #f1f1f1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        /* Ensure it's above the content */
+        padding: 10px;
+        margin-top: 10px;
+        /* Space below the top bar */
+    }
+
+    /* Ensure items inside the menu are stacked vertically */
+    .inside-hamburg .section {
+        margin-bottom: 15px;
+        /* Space between items */
+    }
+
+    /* Style the button and p to align them */
+    .inside-hamburg .section button {
+        font-size: 20px;
+        background: none;
+        border: none;
+        color: #333;
+        cursor: pointer;
+        display: block;
+        /* Ensures they take up full width */
+        width: 100%;
+    }
+
+    /* Styling the description p element */
+    .inside-hamburg .section p {
+        font-size: 16px;
+        color: #333;
+        text-align: center;
+    }
+
+    /* Show the dropdown menu when active */
+    .topbar .inside-hamburg.show {
+        margin-top: 15vi;
+        display: flex;
+        /* Show when toggled */
+    }
+
+    .topbar {
+        justify-content: center;
+    }
+
+    .slidebar {
+        margin-top: 20vi;
+    }
+
+
+
+    .mf {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+    }
+
+    div.mf {
+        margin: auto;
+    }
+
+    .card-body h5,
+    .card-body p {
+        font-size: 5vi;
+    }
+
+    #close-btn {
+        display: inline-block;
+    }
+
+    .search {
+        flex-grow: 0;
+        /* Make search bar not take all the space */
+    }
+
+    .topbar {
+        display: flex;
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center the items */
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+        /* Ensure logo is centered */
+        margin-bottom: 2vi;
+        /* Add space below the logo */
+    }
+
+    .mf {
+        width: 100%;
+        justify-content: center;
+        /* Center content in .mf */
+        margin: 2vi;
+        /* Add spacing above the .mf section */
+    }
+
+    div.mf {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .mf {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 2vi;
+    }
+
+    .search input {
+        flex: 1;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 35vi;
+    }
+    .search input {
+        flex: 1;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 90vi;
+    }
+
+    #close-btn {
+        padding-bottom: 2vi;
+    }
+
+    .user, .cart , .goods-type {
+        padding-right: 0vi;
+    } 
+
+    #hamburg {
+        color: red;
+        margin: 0;
+        padding: 0;
+        font-size: 8vi;
+    }
+
+    .topbar {
+        padding-bottom: 2vi;
+    }
+
+    /* Reset the conflicting width properties on .search input */
+    .search input {
+        margin-left: 0;
+        margin-right: 2vi;
+        width: 90%; 
+        padding: 2vi 20vi;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 1rem;
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    div#hamburg-wrap {
+        margin-left: 26vi;
+        padding: 0;
+    }
+
+    #hamburg {
+        color: #FEF9F2 ;
+    }
 }
