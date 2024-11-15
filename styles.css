@@ -290,6 +290,20 @@ hr {
     margin-top: 0;
 }
 
+@media(max-width: 1080px) {
+    div.section.goods-type {
+        padding-left: 0;
+    }
+
+    .goods-type,
+    .cart,
+    .user {
+        margin-left: 0;
+        margin-right: 3vi;
+        padding: 0 2vi;
+    }
+}
+
 
 @media(max-width: 1024px) {
     div.section.goods-type {
