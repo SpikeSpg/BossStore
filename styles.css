@@ -955,4 +955,8 @@ h4 {
     #hamburg {
         color: #FEF9F2 ;
     }
+
+    button.search-icon {
+        font-size: 2vi;
+    }
 }
