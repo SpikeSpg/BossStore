@@ -13,17 +13,25 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="img/tab.webp">
 
 </head>
 
 <body>
     <div class="topbar">
-        <div class="section logo">
-            <span class="icon"><i class="fas fa-bicycle"></i></span> <!-- Font Awesome bike icon -->
-            <span class="site-name">
-                <h2>BossStore</h2>
-            </span>
-        </div>
+        <a href="/" class="link-logo">
+            <div class="section logo">
+                <span class="icon"><i class="fas fa-bicycle"></i></span> <!-- Font Awesome bike icon -->
+                <span class="site-name">
+                    <h2>BossStore</h2>
+                </span>
+            </div>
+        </a>
         <div class="mf">
             <div class="section search">
                 <input type="text" class="search-box" placeholder="Search">
@@ -42,7 +50,7 @@
                         <!-- Font Awesome list icon -->
                         <p class="description">Categories</p>
                     </div>
-                    <div class="section cart">
+                    <div class="section cart" id="literalCart">
                         <button><i class="fas fa-shopping-cart"></i></button> <!-- Font Awesome shopping cart icon -->
                         <p class="description">Cart</p>
                         <span class="cart-counter" id="cart-counter">0</span>
@@ -55,6 +63,31 @@
             </div>
         </div>
     </div>
+
+    <!--cart float-->
+    <div id="cart-container">
+        <div class="cart-plain">
+            <div class="cart-content">
+                <div class="cart-header">
+                    <h3>Your Cart</h3>
+                    <hr style="border: 1px solid black;">
+                </div>
+                <div class="cart-items">
+                    
+                </div>
+                <div class="cart-footer">
+                    <hr>
+                    <h5 class="total-price">Total = </h5>
+                    <hr>
+                    <div class="cart-btn">
+                        <button id="confirm">Confirm</button>
+                        <button id="cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="content">
         <!-- Slider main container -->
@@ -90,9 +123,10 @@
         <!--road bike-->
         <section class="table-like">
             <div class="goods-text">
-                <h4>Road Bikes</h4>
+                <h4 id="road-b">Road Bikes</h4>
                 <p>"Explore the open road with precision and speed. Road bikes are built for performance, offering
-                    lightweight frames, aerodynamic designs, and smooth handling. Whether you're racing, commuting, or
+                    lightweight frames, aerodynamic designs, and smooth handling. Whether you're racing, commuting,
+                    or
                     embarking on a long-distance ride, our road bikes are crafted to give you the ultimate cycling
                     experience."</p>
                 <hr>
@@ -104,8 +138,8 @@
                         <div class="card">
                             <img src="img\CAAD_Optimo_1.webp" class="card-img-top" alt="Product 1">
                             <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                <h5 class="card-title text-center">Cannondale - CAAD Optimo 1</h5>
-                                <p class="card-text text-center">$1,661.07</p>
+                                <h5 class="card-title text-center item-name">Cannondale - CAAD Optimo 1</h5>
+                                <p class="card-text text-center price">$1,661.07</p>
                                 <button class="btn btn-success text-light">Buy Now</button>
                             </div>
                         </div>
@@ -114,8 +148,8 @@
                         <div class="card">
                             <img src="img\shadows_SL.jpg" class="card-img-top" alt="Product 2">
                             <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                <h5 class="card-title text-center">Trek - Émonda SL</h5>
-                                <p class="card-text text-center">$2,755.57</p>
+                                <h5 class="card-title text-center item-name">Trek - Émonda SL</h5>
+                                <p class="card-text text-center price">$2,755.57</p>
                                 <button class="btn btn-success text-light">Buy Now</button>
                             </div>
                         </div>
@@ -124,8 +158,8 @@
                         <div class="card">
                             <img src="img\cervelo-s5-red-axs.jpg" class="card-img-top" alt="Product 3">
                             <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                <h5 class="card-title text-center">Cervélo - S5 Red Etap Axs</h5>
-                                <p class="card-text text-center">$13,000.00</p>
+                                <h5 class="card-title text-center item-name">Cervélo - S5 Red Etap Axs</h5>
+                                <p class="card-text text-center price">$13,000.00</p>
                                 <button class="btn btn-success text-light">Buy Now</button>
                             </div>
                         </div>
@@ -134,8 +168,8 @@
                         <div class="card">
                             <img src="img\Propel Advanced SL 1.jpg" class="card-img-top" alt="Product 4">
                             <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                <h5 class="card-title text-center">Giant - Propel Advanced SL 1</h5>
-                                <p class="card-text text-center">$2,484.71</p>
+                                <h5 class="card-title text-center item-name">Giant - Propel Advanced SL 1</h5>
+                                <p class="card-text text-center price">$2,484.71</p>
                                 <button class="btn btn-success text-light">Buy Now</button>
                             </div>
                         </div>
@@ -144,8 +178,8 @@
                         <div class="card">
                             <img src="img/scott addict rc 15.jpg" class="card-img-top" alt="Product 4">
                             <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                <h5 class="card-title text-center">Scott - Addict RC 15</h5>
-                                <p class="card-text text-center">$6,599.00</p>
+                                <h5 class="card-title text-center item-name">Scott - Addict RC 15</h5>
+                                <p class="card-text text-center price">$6,599.00</p>
                                 <button class="btn btn-success text-light">Buy Now</button>
                             </div>
                         </div>
@@ -157,10 +191,12 @@
         <!--Mountain Bikes-->
         <section class="table-like">
             <div class="goods-text">
-                <h4>Mountain Bikes</h4>
+                <h4 id="mountain-b">Mountain Bikes</h4>
                 <p>"Conquer any terrain with confidence and control. Mountain bikes are designed for adventure, with
-                    rugged tires, durable frames, and advanced suspension systems. Whether you're hitting rocky trails,
-                    steep climbs, or technical descents, our mountain bikes are ready for whatever the trail throws at
+                    rugged tires, durable frames, and advanced suspension systems. Whether you're hitting rocky
+                    trails,
+                    steep climbs, or technical descents, our mountain bikes are ready for whatever the trail throws
+                    at
                     you."</p>
                 <hr>
             </div>
@@ -171,8 +207,8 @@
                         <div class="card">
                             <img src="img\Turbo Levo Comp Carbon.webp" class="card-img-top" alt="Product 1">
                             <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                <h5 class="card-title text-center">Specialized - Turbo Levo Comp Carbon</h5>
-                                <p class="card-text text-center">$1,661.07</p>
+                                <h5 class="card-title text-center item-name">Specialized - Turbo Levo Comp Carbon</h5>
+                                <p class="card-text text-center price">$1,661.07</p>
                                 <button class="btn btn-success text-light">Buy Now</button>
                             </div>
                         </div>
@@ -181,8 +217,8 @@
                         <div class="card">
                             <img src="img/FuelEXe97US-24-41526-A-Primary.jpg" class="card-img-top" alt="Product 2">
                             <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                <h5 class="card-title text-center">Trek - Fuel EXe 9.7</h5>
-                                <p class="card-text text-center">$7,599.99</p>
+                                <h5 class="card-title text-center item-name">Trek - Fuel EXe 9.7</h5>
+                                <p class="card-text text-center price">$7,599.99</p>
                                 <button class="btn btn-success text-light">Buy Now</button>
                             </div>
                         </div>
@@ -191,8 +227,8 @@
                         <div class="card">
                             <img src="img/Process-X-DH-angle-xl.jpg" class="card-img-top" alt="Product 3">
                             <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                <h5 class="card-title text-center">Kona - Process X DH</h5>
-                                <p class="card-text text-center">$3,499.00</p>
+                                <h5 class="card-title text-center item-name">Kona - Process X DH</h5>
+                                <p class="card-text text-center price">$3,499.00</p>
                                 <button class="btn btn-success text-light">Buy Now</button>
                             </div>
                         </div>
@@ -202,8 +238,8 @@
                             <img src="img/2024-SantaCruz-Heckler-29-GX-AXS-Pewter_1080x.jpg" class="card-img-top"
                                 alt="Product 4">
                             <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                <h5 class="card-title text-center">Santa Cruz - Heckler</h5>
-                                <p class="card-text text-center">$6,999.00</p>
+                                <h5 class="card-title text-center item-name">Santa Cruz - Heckler</h5>
+                                <p class="card-text text-center price">$6,999.00</p>
                                 <button class="btn btn-success text-light">Buy Now</button>
                             </div>
                         </div>
@@ -212,8 +248,8 @@
                         <div class="card">
                             <img src="img/canyon.jpg" class="card-img-top" alt="Product 4">
                             <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                <h5 class="card-title text-center">Canyon - Lux Trail CF 8</h5>
-                                <p class="card-text text-center">$4,399.00</p>
+                                <h5 class="card-title text-center item-name">Canyon - Lux Trail CF 8</h5>
+                                <p class="card-text text-center price">$4,399.00</p>
                                 <button class="btn btn-success text-light">Buy Now</button>
                             </div>
                         </div>
@@ -232,85 +268,8 @@
     <!-- Include Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
 
-            autoplay: {
-                delay: 2000,  // Set delay to 1 second (1000 milliseconds)
-
-                disableOnInteraction: false
-            },
-
-            speed: 1000,
-
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-        });
-
-        // Get the hamburger and close icon
-        const hamburger = document.getElementById('hamburg');
-        const closeBtn = document.getElementById('close-btn');
-
-        // Get the inside-hamburg section
-        const insideHamburg = document.querySelector('.inside-hamburg');
-
-        // Add an event listener for the hamburger icon to toggle the menu visibility
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('fa-bars');
-            hamburger.classList.toggle('fa-times');
-            insideHamburg.classList.toggle('show');
-        });
-
-        // Add an event listener for the close icon to close the menu
-        closeBtn.addEventListener('click', () => {
-            hamburger.classList.toggle('fa-bars');
-            hamburger.classList.toggle('fa-times');
-            insideHamburg.classList.remove('show');  // Close the menu
-        });
-
-
-        // Function to update the cart counter
-        function updateCartCounter() {
-            const cartCounter = document.getElementById('cart-counter');
-            let currentCount = parseInt(cartCounter.innerText);
-            currentCount += 1;
-            cartCounter.innerText = currentCount;
-
-            // Show the cart counter when a product is added
-            cartCounter.style.display = 'inline-block';
-        }
-
-        // Attach event listeners to all "Buy Now" buttons
-        const buyNowButtons = document.querySelectorAll('.btn.btn-success');
-        buyNowButtons.forEach(button => {
-            button.addEventListener('click', updateCartCounter);
-        });
-
-        // Reset the cart counter on page refresh
-        window.onload = function () {
-            const cartCounter = document.getElementById('cart-counter');
-            cartCounter.innerText = '0';
-            cartCounter.style.display = 'none';  // Hide the cart counter initially
-        };
-
-
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
